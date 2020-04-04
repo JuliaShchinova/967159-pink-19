@@ -38,9 +38,9 @@
         <img class="slogan__image" src="img/hand_phone.png" width="320" height="314" alt="iPhone 5s в руке">
         <a class="slogan__link button button--download" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
         <div class="slogan__link-wrapper app">
-          <a class="app__item app__item--ios" href="#"><span class="visually-hidden">IOS</span></a>
-          <a class="app__item app__item--android" href="#"><span class="visually-hidden">Android</span></a>
-          <a class="app__item app__item--windows" href="#"><span class="visually-hidden">Windows</span></a>
+          <a class="app__item app__item--ios" href="https://www.apple.com/ru/ios/app-store/"><span class="visually-hidden">IOS</span></a>
+          <a class="app__item app__item--android" href="https://play.google.com/store"><span class="visually-hidden">Android</span></a>
+          <a class="app__item app__item--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone"><span class="visually-hidden">Windows</span></a>
         </div>
         <p class="slogan__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
@@ -85,17 +85,38 @@
       <section class="prices">
         <h2 class="visually-hidden">Тарифы</h2>
         <div class="prices__wrapper slider">
-          <ul class="prices__list slider__list">
-            <li class="prices__item prices__item--standart slider__item">
-              <h3 class="prices__title">Стандарт</h3>
-              <p class="prices__value">3,99 USD</p>
-              <ul class="prices__description description-list">
-                <li class="description-list__item description-list__item--existence">Розовый фильтр</li>
-                <li class="description-list__item description-list__item--existence">Смайлики</li>
-                <li class="description-list__item description-list__item--failure">Комментарии</li>
-              </ul>
-            </li>
-          </ul>
+          <table class="prices__list">
+            <tr class="prices__string">
+              <th class="visually-hidden">Тариф</th>
+              <td class="prices__cell prices__cell--tariff">База</td>
+              <td class="prices__cell prices__cell--tariff">Стандарт</td>
+              <td class="prices__cell prices__cell--tariff">Анлим</td>
+            </tr>
+            <tr class="prices__string">
+              <th class="visually-hidden">Цена</th>
+              <td class="prices__cell prices__cell--price">1,99 USD</td>
+              <td class="prices__cell prices__cell--price">3,99 USD</td>
+              <td class="prices__cell prices__cell--price">9,99 USD</td>
+            </tr>
+            <tr class="prices__string">
+              <th class="prices__cell prices__cell--title">Розовый фильтр</th>
+              <td class="prices__cell prices__cell--available"><span class="visually-hidden">Да</span></td>
+              <td class="prices__cell prices__cell--available"><span class="visually-hidden">Да</span></td>
+              <td class="prices__cell prices__cell--available"><span class="visually-hidden">Да</span></td>
+            </tr>
+            <tr class="prices__string">
+              <th class="prices__cell prices__cell--title">Смайлики</th>
+              <td class="prices__cell prices__cell--not-available"><span class="visually-hidden">Нет</span></td>
+              <td class="prices__cell prices__cell--available"><span class="visually-hidden">Да</span></td>
+              <td class="prices__cell prices__cell--available"><span class="visually-hidden">Да</span></td>
+            </tr>
+            <tr class="prices__string">
+              <th class="prices__cell prices__cell--title">Комментарии</th>
+              <td class="prices__cell prices__cell--not-available"><span class="visually-hidden">Нет</span></td>
+              <td class="prices__cell prices__cell--not-available"><span class="visually-hidden">Нет</span></td>
+              <td class="prices__cell prices__cell--available"><span class="visually-hidden">Да</span></td>
+            </tr>
+          </table>
           <p class="prices__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
             <button class="slider__toggle slider__toggle--active" type="button">2</button>
@@ -107,20 +128,20 @@
       <section class="contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
         <p class="contacts__preview">Остались вопросы? Свяжитесь с нами!</p>
-        <ul class="contacts__list">
-          <li class="contacts__item">
+        <address class="contacts__list">
+          <div class="contacts__item">
             <span class="contacts__text">Звоните:</span>
             <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-          </li>
-          <li class="contacts__item">
+          </div>
+          <div class="contacts__item">
             <span class="contacts__text">Пишите:</span>
             <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-          <li class="contacts__item">
+          </div>
+          <div class="contacts__item">
             <span class="contacts__text">Приезжайте в гости:</span>
-            <address class="contacts__link">ул. Большая Конюшенная, 19/8</address>
-          </li>
-        </ul>
+            <span class="contacts__link">ул. Большая Конюшенная, 19/8</span>
+          </div>
+        </address>
       </section>
 
       <div class="map"></div>
