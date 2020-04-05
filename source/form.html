@@ -31,13 +31,13 @@
       </nav>
     </header>
 
-    <main class="page-main contest">
-      <h1 class="contest__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      <p class="contest__preview">Поделитесь своей историей и получите шанс
+    <main class="page-main inner-page">
+      <h1 class="inner-page__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <p class="inner-page__preview">Поделитесь своей историей и получите шанс
         выиграть ценный приз — 1000 миль на вашу бонусную карту!
         Пожалуйста, заполните форму ниже:</p>
 
-        <form class="contest__form form" action="https://echo.htmlacademy.ru/" method="POST">
+        <form class="form" action="https://echo.htmlacademy.ru/" method="POST">
         <fieldset class="form__fieldset">
           <legend class="visually-hidden">ФИО</legend>
           <ul class="form__list ">
@@ -91,11 +91,11 @@
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label" for="phone">Номер телефона</label>
-              <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста" pattern="[0-9]{10,13}">
+              <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
             </li>
             <li class="form__item">
               <label class="form__label" for="email">Адрес почты</label>
-              <input class="form__input" type="email" name="email" id="email" placeholder="Введите почту *" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+              <input class="form__input" type="email" name="email" id="email" placeholder="Введите почту *" required>
             </li>
           </ul>
         </fieldset>
