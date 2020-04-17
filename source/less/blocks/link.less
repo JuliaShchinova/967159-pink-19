@@ -1,0 +1,17 @@
+.link {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  color: @pink;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: @bg-darkblue;
+    text-decoration: underline;
+  }
+
+  &[href]:active {
+    color: rgba(@bg-darkblue, 30%);
+  }
+}
