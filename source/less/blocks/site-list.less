@@ -1,0 +1,29 @@
+.site-list {
+  .list-style();
+  .indents();
+}
+
+.site-list__item a {
+  display: block;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  color: @white;
+  text-transform: uppercase;
+  text-align: center;
+
+  box-shadow: 0 1px 0 0 @black, inset 0 1px 0 0 rgba(@white, 0.15);
+
+  &[href]:hover,
+  &[href]:focus {
+    color: @pink;
+  }
+
+  &[href]:active {
+    color: rgba(@pink, 30%);
+  }
+}

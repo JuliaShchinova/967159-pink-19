@@ -1,0 +1,41 @@
+.modal {
+  width: 320px;
+  .margin();
+  padding-top: 45px;
+
+  background-color: @white;
+  box-shadow: 0 7px 15px 0 rgba(@black, 0.15);
+}
+
+.modal__alert {
+  .indents();
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: @black;
+}
+
+.modal__text {
+  display: block;
+  margin-bottom: 30px;
+
+  text-align: center;
+  color: @bg-darkblue;
+}
+
+.modal__btn-wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: @white-beige;
+
+  &--mobile {
+    padding-top: 0;
+    background-color: @white;
+  }
+}
+
+.modal__button {
+  .margin();
+}
