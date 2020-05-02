@@ -1,5 +1,6 @@
 .filters {
   padding-top: 20px;
+  padding-bottom: 41px;
 
   background-color: @white-beige;
 }
@@ -21,5 +22,26 @@
 
 .filters__button-wrapper {
   padding-top: 38px;
-  padding-bottom: 41px;
+}
+
+@media (min-width: @tablet-width) {
+  .filters {
+    padding-top: 58px;
+    padding-bottom: 50px;
+  }
+
+  .filters__flex {
+    display: flex;
+  }
+
+  .filters__button-wrapper {
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__button-wrapper {
+    width: 410px;
+    display: flex;
+  }
 }

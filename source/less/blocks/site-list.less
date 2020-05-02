@@ -3,14 +3,6 @@
   .indents();
 }
 
-@media (min-width: @desktop-width) {
-  .site-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-
 .site-list__item a {
   display: block;
 
@@ -37,10 +29,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .site-list__item a {
     line-height: 18px;
     font-weight: 400;
     text-transform: none;
     box-shadow: none;
+  }
+
+  .site-list__item--active a {
+    border-bottom: 2px solid @white;
   }
 }

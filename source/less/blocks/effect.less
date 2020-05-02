@@ -1,0 +1,61 @@
+.effect {
+  width: 320px;
+  margin-left: 300px;
+  padding-top: 40px;
+  padding-right: 14px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
+.advantages__effect-wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.effect__title {
+  width: 200px;
+  .indents();
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: @black;
+}
+
+.effect__text {
+  .indents();
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: @bg-darkblue;
+}
+
+.effect__link {
+  font-size: 14px;
+  line-height: 24px;
+  color: @pink;
+  text-decoration: underline;
+}
+
+@media (min-width: @desktop-width) {
+  .effect {
+    width: 550px;
+  }
+
+  .effect__title {
+    width: auto;
+    line-height: 30px;
+  }
+
+  .effect__text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .effect__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
