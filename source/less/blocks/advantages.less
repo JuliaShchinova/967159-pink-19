@@ -97,6 +97,33 @@
   .advantages__effect {
     display: block;
   }
+
+  .advantages__effect-wrapper {
+    position: relative;
+    background-image: url("../img/timer.svg");
+    background-repeat: no-repeat;
+    background-position: left 21px center;
+    background-size: 238px auto;
+
+    &::before {
+      position: absolute;
+      width: 202px;
+      height: 202px;
+      box-sizing: border-box;
+
+      content: "24";
+      font-size: 96px;
+      line-height: 149.5px;
+      font-weight: 700;
+      text-align: center;
+      color: @pink;
+      border: 15px solid @pink;
+      border-radius: 50%;
+
+      left: 39px;
+      top: 130px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -143,5 +170,29 @@
 
   .advantages__effect {
     background-color: @white-beige;
+  }
+
+  .advantages__effect-wrapper {
+    background-position: left 10px center;
+    background-size: 298px auto;
+
+    &::before {
+      position: absolute;
+      width: 253px;
+      height: 253px;
+      box-sizing: border-box;
+
+      content: "24";
+      font-size: 120px;
+      line-height: 187px;
+      font-weight: 700;
+      text-align: center;
+      color: @pink;
+      border: 17px solid @pink;
+      border-radius: 50%;
+
+      left: 33px;
+      top: 88px;
+    }
   }
 }
