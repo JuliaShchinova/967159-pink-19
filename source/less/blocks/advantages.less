@@ -103,36 +103,27 @@
 
     &::before {
       position: absolute;
-      content: "";
-      width: 270px;
-      height: 276px;
-
-      background-image: url("../img/timer.svg");
-      background-repeat: no-repeat;
-      background-position: left 21px center;
-      background-size: 238px 276px;
-
-      left: 0;
-      top: 73px;
-    }
-
-    &::after {
-      position: absolute;
-      width: 202px;
-      height: 202px;
+      content: "24";
       box-sizing: border-box;
 
-      content: "24";
+      width: 270px;
+      height: 276px;
+      padding-top: 103px;
+      padding-left: 5px;
+
       font-size: 96px;
-      line-height: 149.5px;
+      line-height: 96px;
       font-weight: 700;
       text-align: center;
       color: @pink;
-      border: 15px solid @pink;
-      border-radius: 50%;
 
-      left: 39px;
-      top: 130px;
+      background-image: radial-gradient(circle, @white, @white 86px, @pink 87px, @pink 100px, transparent 101px, transparent 100%), url("../img/timer.svg");
+      background-repeat: no-repeat no-repeat;
+      background-position: left 40px top 55px, left 21px center;
+      background-size: 202px 202px, 238px 276px;
+
+      left: 0;
+      top: 73px;
     }
   }
 }
@@ -186,36 +177,27 @@
   .advantages__effect-wrapper {
     &::before {
       position: absolute;
-      content: "";
-      width: 310px;
-      height: 345px;
-
-      background-image: url("../img/timer.svg");
-      background-repeat: no-repeat;
-      background-position: left 10px center;
-      background-size: 298px auto;
-
-      left: 0;
-      top: 20px;
-    }
-
-    &::after {
-      position: absolute;
-      width: 253px;
-      height: 253px;
+      content: "24";
       box-sizing: border-box;
 
-      content: "24";
+      width: 310px;
+      height: 345px;
+      padding-top: 125px;
+      padding-left: 10px;
+
       font-size: 120px;
-      line-height: 187px;
+      line-height: 120px;
       font-weight: 700;
       text-align: center;
       color: @pink;
-      border: 17px solid @pink;
-      border-radius: 50%;
 
-      left: 33px;
-      top: 88px;
+      background-image: radial-gradient(circle, @white, @white 100px, @pink 101px, @pink 117px, transparent 118px, transparent 100%), url("../img/timer.svg");
+      background-repeat: no-repeat no-repeat;
+      background-position: left 35px top 70px, left 10px center;
+      background-size: 253px 253px, 298px auto;
+
+      left: 10px;
+      top: 0;
     }
   }
 }
