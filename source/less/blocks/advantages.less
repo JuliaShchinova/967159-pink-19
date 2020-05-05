@@ -100,12 +100,23 @@
 
   .advantages__effect-wrapper {
     position: relative;
-    background-image: url("../img/timer.svg");
-    background-repeat: no-repeat;
-    background-position: left 21px center;
-    background-size: 238px auto;
 
     &::before {
+      position: absolute;
+      content: "";
+      width: 270px;
+      height: 276px;
+
+      background-image: url("../img/timer.svg");
+      background-repeat: no-repeat;
+      background-position: left 21px center;
+      background-size: 238px 276px;
+
+      left: 0;
+      top: 73px;
+    }
+
+    &::after {
       position: absolute;
       width: 202px;
       height: 202px;
@@ -173,10 +184,22 @@
   }
 
   .advantages__effect-wrapper {
-    background-position: left 10px center;
-    background-size: 298px auto;
-
     &::before {
+      position: absolute;
+      content: "";
+      width: 310px;
+      height: 345px;
+
+      background-image: url("../img/timer.svg");
+      background-repeat: no-repeat;
+      background-position: left 10px center;
+      background-size: 298px auto;
+
+      left: 0;
+      top: 20px;
+    }
+
+    &::after {
       position: absolute;
       width: 253px;
       height: 253px;
