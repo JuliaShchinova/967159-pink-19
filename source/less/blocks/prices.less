@@ -9,13 +9,20 @@
   background-color: @white-beige;
 }
 
+.prices__wrapper {
+  width: 1120px;
+  .margin();
+  overflow: hidden;
+}
+
 .prices__list {
-  .margin;
+  width: 100%;
+  .margin();
   border-collapse: collapse;
 }
 
 .prices__cell {
-  width: 233px;
+  width: 280px;
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -66,5 +73,55 @@
     text-align: left;
     font-weight: 400;
     color: @bg-darkblue;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .prices__wrapper {
+    width: 620px;
+    .margin();
+  }
+
+  .prices__cell {
+    width: 160px;
+
+    &--tariff {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    &--price {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &--title {
+      text-transform: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .prices__wrapper {
+    width: 940px;
+  }
+
+  .prices__cell {
+    width: 233px;
+
+    &--tariff {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &--price {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &--title {
+      font-size: 18px;
+      list-style: 30px;
+    }
   }
 }

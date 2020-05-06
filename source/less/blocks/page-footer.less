@@ -2,4 +2,30 @@
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
+
+  &--main {
+    display: none;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__social {
+  .margin();
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    &--main {
+      display: block;
+    }
+  }
+
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

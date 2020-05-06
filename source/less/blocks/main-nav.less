@@ -1,3 +1,44 @@
 .main-nav {
   min-height: 66px;
 }
+
+.main-nav__toogle-wrapper {
+  min-height: 66px;
+  // max-width: 320px;
+  // .margin();
+  position: relative;
+}
+
+.main-nav__toogle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+
+  top: 21px;
+  right: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toogle-wrapper {
+    min-height: 109px;
+    // max-width: 660px;
+  }
+
+  .main-nav__toogle {
+    top: 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    min-width: 660px;
+  }
+
+  .main-nav__toogle-wrapper {
+    display: none;
+  }
+
+  .main-nav__toogle {
+    display: none;
+  }
+}

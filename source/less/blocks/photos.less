@@ -10,14 +10,25 @@
 }
 
 .photos__item {
+  width: 280px;
   padding-bottom: 20px;
+
+  &--panorama {
+    position: relative;
+    width: auto;
+    .margin();
+  }
 }
 
 .photos__title {
+  display: block;
+  position: absolute;
   .indents();
   width: 140px;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  left: calc(50% - 20px);
 
   font-size: 12px;
   line-height: 24px;
@@ -37,12 +48,13 @@
   background-color: @light-grey;
 
   &--panorama {
+    width: 100%;
     min-height: 137px;
+    object-fit: cover;
   }
 }
 
 .photos__info {
-  width: 280px;
   .margin;
   padding-top: 25px;
   padding-right: 10px;
@@ -50,6 +62,10 @@
   padding-left: 17px;
 
   background-color: @white-beige;
+
+  &--panorama {
+    width: 280px;
+  }
 }
 
 .photos__author {
@@ -67,6 +83,11 @@
   margin-bottom: 15px;
 }
 
+.photos__likes-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .photos__likes {
   font-size: 12px;
   text-transform: uppercase;
@@ -75,8 +96,77 @@
 
 .photos__slogan {
   .indents();
+  .margin();
   margin-top: 20px;
 
   line-height: 30px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .photos__title {
+    top: 55px;
+    left: calc(70% - 20px);
+  }
+
+  .photos__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .photos__item {
+    width: 300px;
+
+    &--panorama {
+      width: auto;
+    }
+  }
+
+  .photos__link-image {
+    width: 300px;
+    min-height: 300px;
+
+    &--panorama {
+      width: 100%;
+      min-height: 509px;
+      object-fit: cover;
+    }
+  }
+
+  .photos__info {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &--panorama {
+      width: 620px;
+    }
+  }
+
+  .photos__likes-wrapper {
+    flex-direction: row-reverse;
+  }
+
+  .photos__slogan {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos__link-image {
+    min-height: 400px;
+
+    &--panorama {
+      width: 100%;
+      min-height: 506px;
+      object-fit: cover;
+    }
+  }
+
+  .photos__info {
+    &--panorama {
+      width: 940px;
+    }
+  }
 }
