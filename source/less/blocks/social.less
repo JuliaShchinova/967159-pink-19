@@ -2,13 +2,26 @@
   width: 200px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  // justify-content: space-around;
 }
 
 .social__link {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 4px;
 
   border: 3px solid rgba(@bg-darkblue, 10%);
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border-color: @bg-darkblue;
+    outline: none;
+  }
+
+  &:active {
+    border-color: rgba(@bg-darkblue, 10%);
+    outline: none;
+  }
 }

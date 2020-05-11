@@ -1,6 +1,6 @@
 .page-footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  // padding-top: 40px;
+  // padding-bottom: 40px;
   text-align: center;
 
   &--main {
@@ -17,8 +17,15 @@
   .margin();
 }
 
+.page-footer__logo {
+  width: 170px;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
     &--main {
       display: block;
     }
@@ -27,5 +34,16 @@
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding-top: 73px;
+    padding-bottom: 73px;
+  }
+
+  .page-footer__logo {
+    width: 195px;
   }
 }
