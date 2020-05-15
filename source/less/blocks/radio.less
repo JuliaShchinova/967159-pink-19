@@ -1,5 +1,26 @@
 .radio__label {
+  display: block;
+
+  margin-bottom: 35px;
+  padding-top: 5px;
+  padding-left: 69px;
+  padding-bottom: 5px;
+
   font-size: 18px;
   line-height: 30px;
   color: @bg-darkblue;
+}
+
+@media (min-width: @tablet-width) {
+  .radio__label {
+    margin-left: 48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio__label {
+    margin-bottom: 33px;
+    padding-top: 7px;
+    padding-left: 75px;
+  }
 }

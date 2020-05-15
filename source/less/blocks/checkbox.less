@@ -1,5 +1,25 @@
 .checkbox__label {
+  display: block;
+
+  margin-bottom: 44px;
+  padding-top: 4px;
+  padding-left: 69px;
+  padding-bottom: 4px;
+
   font-size: 18px;
   line-height: 30px;
   color: @bg-darkblue;
+}
+
+@media (min-width: @tablet-width) {
+  .checkbox__label {
+    margin-left: 48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox__label {
+    margin-left: 0;
+    padding-left: 60px;
+  }
 }
