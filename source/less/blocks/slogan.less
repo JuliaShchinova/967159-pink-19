@@ -1,5 +1,5 @@
 .slogan {
-  padding-top: 25px;
+  padding-top: 24px;
 
   color: @white;
 }
@@ -10,26 +10,33 @@
 
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: top 90px left;
+  background-position: top 86px left;
 }
 
 .slogan__header {
   .indents();
-  min-height: 375px;
+  min-height: 372px;
 
   font-size: 24px;
+  line-height: 28px;
   font-weight: 300;
   text-align: center;
 }
 
 .slogan__body-wrapper {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 28px;
+  padding-bottom: 31px;
 
   background-color: @bg-dark;
 }
 
+.slogan__link-wrapper {
+  padding-top: 32px;
+  padding-bottom: 20px;
+}
+
 .slogan__description {
+  .indents();
   font-weight: 300;
   text-align: center;
 }
@@ -40,33 +47,33 @@
     max-width: 660px;
     .margin();
     padding-top: 50px;
+    padding-bottom: 79px;
+
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: bottom right;
-
-    //временно
-
-    min-height: 620px;
+    background-position: bottom left -20px;
   }
 
   .slogan__header-wrapper {
-    min-height: auto;
     margin: 0;
+    margin-top: 45px;
+    margin-bottom: 35px;
 
     background-image: none;
   }
 
   .slogan__header {
     min-height: auto;
-    padding-left: 30px;
+    padding-left: 50px;
     padding-right: 30px;
 
     font-size: 40px;
-    line-height: 40px;
+    line-height: 46px;
   }
 
   .slogan__body-wrapper {
     margin: 0;
+    padding-top: 0;
     background-color: transparent;
   }
 
@@ -74,25 +81,46 @@
     max-width: 320px;
     margin: 0;
   }
+
+  .slogan__link-wrapper {
+    padding-top: 47px;
+    padding-bottom: 35px;
+  }
+
+  .slogan__description {
+    width: 300px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .slogan {
+    padding-bottom: 90px;
     max-width: 960px;
+
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: bottom right -110px;
-
-    //временно
-
-    min-height: 742px;
+    background-position: bottom right -116px;
   }
 
   .slogan__header {
+    padding-top: 14px;
+    padding-left: 30px;
+
     font-size: 50px;
-    line-height: 50px;
+    line-height: 60px;
+  }
+
+  .slogan__header-wrapper {
+    margin-bottom: 51px;
   }
 
   .slogan__body-wrapper .container {
     max-width: auto;
+  }
+
+  .slogan__link-wrapper {
+    padding-top: 67px;
+    padding-bottom: 55px;
   }
 }

@@ -1,33 +1,73 @@
 .prices {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 105px;
+  padding-bottom: 46px;
 
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
 
-  background-color: @white-beige;
+  background: linear-gradient(176deg, #ffffff, #ffffff 12%, #f2f2f2 12%, #f2f2f2);
+  background-repeat: no-repeat;
+}
+
+.prices__container {
+  padding-top: 28px;
 }
 
 .prices__wrapper {
-  width: 1120px;
+  width: 320px;
   .margin();
+  margin-bottom: 40px;
+
   overflow: hidden;
 }
 
 .prices__list {
+  position: relative;
   width: 100%;
+  transform: translateX(-261px);
   .margin();
   border-collapse: collapse;
 }
 
+.prices__string {
+  display: flex;
+  justify-content: flex-end;
+
+  &:first-child .prices__cell,
+  &:nth-child(2) .prices__cell,
+  &:nth-child(3) .prices__cell,
+  &:nth-child(4) .prices__cell {
+    border-bottom: none;
+  }
+
+  // &:nth-child(3) .prices__cell:nth-child(2),
+  // &:nth-child(3) .prices__cell:nth-child(3),
+  // &:nth-child(3) .prices__cell:nth-child(4) {
+  //   border-top: none;
+  // }
+}
+
 .prices__cell {
+  display: block;
   width: 280px;
-  padding-top: 15px;
+  padding-top: 16px;
   padding-bottom: 15px;
 
   background-color: @white;
   border: 2px solid @light-grey;
+
+  &:first-child,
+  &:nth-child(2),
+  &:nth-child(3) {
+    border-right: none;
+  }
+
+  &:first-child {
+    position: absolute;
+    left: 281px;
+    background-color: transparent;
+  }
 
   &--tariff {
     padding-bottom: 0;
@@ -38,9 +78,13 @@
     color: @white;
 
     background-color: @bg-darkblue;
-    border-bottom: none;
+    border-top: none;
     border-color: @bg-darkblue;
-    border-right-color: @white;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      border-left-color: @white;
+    }
 
     &:nth-child(4) {
       border-right-color: @bg-darkblue;
@@ -48,7 +92,8 @@
   }
 
   &--price {
-    padding-top: 0;
+    padding-top: 1px;
+    padding-bottom: 21px;
 
     font-size: 24px;
     font-weight: 300;
@@ -56,9 +101,14 @@
     color: @white;
 
     background-color: @bg-darkblue;
-    border-bottom: none;
+    border-top: none;
     border-color: @bg-darkblue;
     border-right-color: @white;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      border-left-color: @white;
+    }
 
     &:nth-child(4) {
       border-right-color: @bg-darkblue;
@@ -66,60 +116,134 @@
   }
 
   &--title {
-    padding-left: 22px;
+    padding-top: 13px;
     padding-right: 18px;
+    padding-bottom: 15px;
+    padding-left: 22px;
 
     font-size: 14px;
     text-align: left;
     font-weight: 400;
     color: @bg-darkblue;
   }
+
+  &--true,
+  &--false {
+    min-height: 61px;
+  }
+}
+
+.prices__toggles {
+  .margin();
 }
 
 @media (min-width: @tablet-width) {
+  .prices {
+    padding-top: 81px;
+    padding-bottom: 68px;
+
+    background: linear-gradient(176deg, #ffffff, #ffffff 16%, #f2f2f2 16%, #f2f2f2);
+    background-repeat: no-repeat;
+  }
+
   .prices__wrapper {
     width: 620px;
     .margin();
   }
 
+  .prices__list {
+    transform: none;
+  }
+
   .prices__cell {
-    width: 160px;
+    width: 155px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:first-child {
+      position: static;
+      transform: none;
+      background-color: @white;
+    }
 
     &--tariff {
+      padding-top: 11px;
+      padding-bottom: 0;
+
       font-size: 16px;
       line-height: 30px;
     }
 
     &--price {
+      padding-top: 0;
+      padding-bottom: 7px;
+
       font-size: 18px;
       line-height: 30px;
     }
 
     &--title {
+      padding-top: 6px;
+      padding-bottom: 9px;
+      padding-left: 14px;
       text-transform: none;
     }
+
+    &--true,
+    &--false {
+      min-height: 46px;
+    }
+  }
+
+  .prices__toggles {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .prices {
+    padding-top: 161px;
+    padding-bottom: 97px;
+
+    background: linear-gradient(176deg, #ffffff, #ffffff 19%, #f2f2f2 19%, #f2f2f2);
+    background-repeat: no-repeat;
+  }
+
   .prices__wrapper {
     width: 940px;
   }
 
   .prices__cell {
-    width: 233px;
+    width: 235px;
 
     &--tariff {
+      padding-top: 16px;
+      padding-bottom: 1px;
+
       font-size: 18px;
       line-height: 30px;
+
+      &:nth-child(3) {
+        padding-left: 0;
+      }
     }
 
     &--price {
+      padding-bottom: 19px;
+
       font-size: 24px;
       line-height: 30px;
+
+      &:nth-child(3) {
+        padding-left: 0;
+      }
     }
 
     &--title {
+      padding-top: 15px;
+      padding-bottom: 14px;
+      padding-left: 20px;
+
       font-size: 18px;
       list-style: 30px;
     }

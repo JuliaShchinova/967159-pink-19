@@ -1,15 +1,22 @@
 .app {
+  width: 230px;
+  .margin();
+
   display: flex;
   justify-content: space-around;
-
-  padding-top: 30px;
 }
 
 .app__item {
   display: block;
   width: 57px;
-  height: 57px;
+  height: 58px;
 
   // временно для сетки
   border: 2px solid @white;
+}
+
+@media (min-width: @tablet-width) {
+  .app {
+    margin-left: 35px;
+  }
 }

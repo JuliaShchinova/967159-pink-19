@@ -4,7 +4,7 @@
 
   .margin();
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
 
   font-size: 18px;
   line-height: 18px;
@@ -37,7 +37,7 @@
   }
 
   &--pink {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     color: @pink;
     border-color: @pink;
 
@@ -82,6 +82,7 @@
 
     &--pink {
       width: 260px;
+      margin-bottom: 26px;
     }
 
     &--grey {
@@ -92,13 +93,25 @@
 
 @media (min-width: @desktop-width) {
   .btn-primary {
+    font-size: 21px;
+
     &--pink {
       width: 183px;
       margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+
+      font-size: 18px;
+      line-height: 18px;
     }
 
     &--grey {
       width: 183px;
+      margin-left: 0;
+      margin-right: 0;
+
+      font-size: 18px;
+      line-height: 18px;
     }
   }
 }

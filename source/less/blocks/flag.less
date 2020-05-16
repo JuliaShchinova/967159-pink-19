@@ -1,0 +1,87 @@
+.flag {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 74px;
+    height: 73px;
+
+    top: 0;
+    left: -1px;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 74px 73px;
+
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "Хит";
+
+    width: 74px;
+    height: 73px;
+
+    top: 5px;
+    left: 1px;
+    transform: rotate(-45deg);
+
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @white;
+
+    z-index: 2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .flag {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 61px;
+      height: 61px;
+
+      top: 0;
+      left: 0;
+
+      background-image: url("../img/bg-hit-tablet.svg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 61px 61px;
+
+      z-index: 1;
+    }
+
+    &::after {
+      top: -2px;
+      left: -3px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .flag {
+    &::before {
+      width: 74px;
+      height: 73px;
+
+      left: -1px;
+
+      background-image: url("../img/bg-hit.svg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 74px 73px;
+    }
+
+    &::after {
+      top: 5px;
+      left: 1px;
+    }
+  }
+}

@@ -1,12 +1,47 @@
+.copyright {
+  width: 170px;
+  display: flex;
+  justify-content: center;
+}
+
 .copyright__text {
+  display: block;
+  padding-top: 16px;
+
   line-height: 18px;
   font-weight: 400;
   color: @bg-darkblue;
 }
 
+.copyright__link {
+  display: block;
+  width: 27px;
+  height: 34px;
+
+  margin-top: 10px;
+  margin-left: 12px;
+
+  //временно
+
+  border: 1px solid @black;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: space-between;
+  }
+
+  .copyright__text {
+    padding-left: 40px;
+  }
+}
+
 @media (min-width: @desktop-width) {
+  .copyright {
+    width: 195px;
+  }
+
   .copyright__text {
     font-size: 18px;
-    left: 18px;
   }
 }
