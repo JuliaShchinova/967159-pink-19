@@ -8,10 +8,15 @@
   &--inner {
     background-position: bottom -254px center;
   }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+    background-size: 777px auto;
+  }
 }
 
 .page-header__wrapper {
-  background-color: rgba(@bg-dark, 30%);
+  background-color: rgba(@black, 30%);
 }
 
 .page-header__wrapper-flex {
@@ -98,8 +103,17 @@
     background-position: bottom center;
     background-size: 2560px;
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-position: bottom -12px center;
+    }
+
     &--inner {
       background-position: top center;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-position: top 12px center;
+      }
     }
   }
 

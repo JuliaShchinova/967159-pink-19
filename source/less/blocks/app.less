@@ -11,12 +11,41 @@
   width: 57px;
   height: 58px;
 
-  // временно для сетки
-  border: 2px solid @white;
+  &--ios {
+    background-image: url("../img/logo-apple.svg");
+    background-repeat: no-repeat;
+    background-position: left 2px center;
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+    background-repeat: no-repeat;
+    background-position: left 7px top 9px;
+  }
+
+  &--windows {
+    background-image: url("../img/logo-microsoft.svg");
+    background-repeat: no-repeat;
+    background-position: left 9px top 12px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .app {
     margin-left: 35px;
+  }
+
+  .app__item {
+    &--android {
+      background-position: left 7px top 6px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app__item {
+    &--android {
+      background-position: left 7px top 9px;
+    }
   }
 }
