@@ -266,19 +266,38 @@
       margin-top: 10px;
       margin-bottom: 12px;
       margin-left: 77px;
+    }
 
-      &::before {
-        position: absolute;
-        content: "";
+    &--contacts-phone::before {
+      position: absolute;
+      content: "";
 
-        width: 59px;
-        height: 62.5px;
+      width: 59px;
+      height: 62.5px;
 
-        top: -72px;
-        right: 41px;
+      top: -72px;
+      right: 41px;
 
-        background-color: @light-grey;
-      }
+      background-color: @light-grey;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--contacts-mail::before {
+      position: absolute;
+      content: "";
+
+      width: 59px;
+      height: 62.5px;
+
+      top: -72px;
+      right: 41px;
+
+      background-color: @light-grey;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 

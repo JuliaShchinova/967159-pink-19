@@ -41,9 +41,34 @@
   width: 55px;
   height: 55px;
 
-  //временно
+  color: rgba(@bg-darkblue, 30%);
 
-  border: 1px solid black;
+  &:hover,
+  &:focus {
+    color: rgba(@bg-darkblue, 50%);
+  }
+
+  &:active {
+    color: @pink;
+  }
+
+  &--active {
+    color: @pink;
+  }
+
+  &--clip {
+    padding-top: 2px;
+    padding-left: 2px;
+  }
+
+  &--saturation {
+    padding-top: 4px;
+  }
+
+  &--contrast {
+    padding-top: 11px;
+    padding-left: 9px;
+  }
 }
 
 .filters__input {
@@ -182,6 +207,32 @@
     }
   }
 
+  .filters__label {
+    color: @pink;
+  }
+
+  .filters__label-icon {
+    &--clip {
+      width: 23px;
+      height: 23px;
+      margin-top: 6px;
+      margin-left: 4px;
+    }
+
+    &--saturation {
+      width: 24px;
+      height: 24px;
+      margin-top: 7px;
+      margin-left: 9px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+      margin-left: 4px;
+    }
+  }
+
   .filters__input {
     display: block;
     width: 202px;
@@ -246,6 +297,34 @@
   .filters__input {
     width: 288px;
     margin-left: 36px;
+  }
+
+  .filters__label {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .filters__label-icon {
+    &--clip {
+      width: 48px;
+      height: 48px;
+      margin-top: -3px;
+      margin-left: 0;
+    }
+
+    &--saturation {
+      width: 48px;
+      height: 48px;
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+      margin-top: 4px;
+      margin-left: 4px;
+    }
   }
 
   .filters__button-wrapper {

@@ -21,10 +21,18 @@
   margin-top: 10px;
   margin-left: 12px;
 
-  //временно
+  color: @pink;
 
-  border: 1px solid @black;
+  &:hover,
+  &:focus {
+    color: @bg-darkblue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .copyright {
