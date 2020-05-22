@@ -197,12 +197,16 @@
   .form__fieldset {
     width: 620px;
     margin-bottom: 58px;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-bottom: 18px;
 
     border: 2px solid @light-grey;
 
     &--name {
       padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
       order: 1;
       border: none;
     }
@@ -262,61 +266,36 @@
     margin-left: 0;
 
     &--contacts {
-      position: relative;
       margin-top: 10px;
       margin-bottom: 12px;
-      margin-left: 77px;
-    }
-
-    &--contacts-phone::before {
-      position: absolute;
-      content: "";
-
-      width: 59px;
-      height: 62.5px;
-
-      top: -72px;
-      right: 41px;
-
-      background-color: @light-grey;
-      background-image: url("../img/icon-phone.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &--contacts-mail::before {
-      position: absolute;
-      content: "";
-
-      width: 59px;
-      height: 62.5px;
-
-      top: -72px;
-      right: 41px;
-
-      background-color: @light-grey;
-      background-image: url("../img/icon-mail.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+      margin-left: 17px;
     }
   }
 
   .form__input {
     &--contacts {
-      width: 438px;
-      margin-left: 60px;
-      margin-right: auto;
+      width: 100%;
 
       padding-top: 14px;
-      padding-right: 18px;
+      padding-right: 62px;
       padding-left: 18px;
+    }
 
-      z-index: 1;
+    &--contacts-phone {
+      background: url("../img/icon-phone.svg"), linear-gradient(90deg, #ffffff, #ffffff 87%, #e5e5e5 88%, #e5e5e5);
+      background-repeat: no-repeat;
+      background-position: right 20px center, right center;
+    }
+
+    &--contacts-mail {
+      background: url("../img/icon-mail.svg"), linear-gradient(90deg, #ffffff, #ffffff 87%, #e5e5e5 88%, #e5e5e5);
+      background-repeat: no-repeat;
+      background-position: right 20px center, right center;
     }
   }
 
   .form__textarea {
-    width: 500px;
+    width: 100%;
     padding-bottom: 14px;
   }
 
@@ -356,6 +335,7 @@
       .form__fieldset {
         width: 435px;
         margin-right: 0;
+        margin-left: auto;
         padding-bottom: 19px;
       }
     }
@@ -410,8 +390,6 @@
 
   .form__fieldset {
     width: auto;
-    padding-right: 10px;
-    padding-left: 10px;
 
     &--name {
       width: 470px;
@@ -424,12 +402,13 @@
       width: 940px;
       margin-bottom: 57px;
 
-      & .form__list {
+      .form__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
 
-      & .form__item {
+      .form__item {
         margin-bottom: 0;
       }
     }
@@ -461,26 +440,11 @@
     padding-top: 15px;
 
     &--contacts {
-      width: 312px;
-      margin-right: 83px;
-      margin-left: 49px;
-    }
-  }
-
-  .form__label {
-    &--contacts {
-      margin-left: 67px;
-
-      &::before {
-        width: 61px;
-        top: -73px;
-        right: 3px;
-      }
+      width: 374px;
     }
   }
 
   .form__textarea {
-    width: 820px;
     height: 128px;
   }
 
