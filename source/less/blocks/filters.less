@@ -100,9 +100,10 @@
 
 .filters__input::-webkit-slider-thumb {
   appearance: none;
-  // margin-top: -6px;
   width: 14px;
   height: 14px;
+  margin-top: -6px;
+
   background: @white;
   border: 2px solid @pink;
   border-radius: 50%;
@@ -117,6 +118,7 @@
   appearance: none;
   width: 11px;
   height: 11px;
+
   background: @white;
   border: 2px solid @pink;
   border-radius: 50%;
@@ -131,9 +133,12 @@
   display: block;
   width: 14px;
   height: 14px;
+  margin-top: 0;
+
   background-color: @white;
   border: 2px solid @pink;
   border-radius: 50%;
+
   box-sizing: border-box;
   cursor: pointer;
 
@@ -146,11 +151,12 @@
 .filters__input::-ms-track {
   width: 100%;
   height: 2px;
-  cursor: pointer;
+
   border-width: 7px 0;
   background-color: transparent;
   border-color: transparent;
   color: transparent;
+  cursor: pointer;
 }
 
 .filters__input::-ms-fill-lower {
