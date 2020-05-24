@@ -41,19 +41,9 @@
   width: 55px;
   height: 55px;
 
-  color: rgba(@bg-darkblue, 30%);
 
-  &:hover,
-  &:focus {
-    color: rgba(@bg-darkblue, 50%);
-  }
-
-  &:active {
-    color: @pink;
-  }
-
-  &--active {
-    color: @pink;
+  &--active svg {
+    fill: @pink;
   }
 
   &--clip {
@@ -68,6 +58,19 @@
   &--contrast {
     padding-top: 11px;
     padding-left: 9px;
+  }
+}
+
+.filters__label-icon {
+  fill: rgba(@bg-darkblue, 30%);
+
+  &:hover,
+  &:focus {
+    fill: rgba(@bg-darkblue, 50%);
+  }
+
+  &:active {
+    fill: @pink;
   }
 }
 
@@ -224,14 +227,14 @@
   }
 
   .filters__label {
-    color: @pink;
-
     &--contrast {
       padding-top: 9px;
     }
   }
 
   .filters__label-icon {
+    fill: @pink;
+
     &--clip {
       width: 23px;
       height: 23px;
