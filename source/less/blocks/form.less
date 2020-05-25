@@ -23,7 +23,7 @@
 
   &--emotion {
     margin-top: 44px;
-    padding-bottom: 31px;
+    padding-bottom: 32px;
   }
 }
 
@@ -119,13 +119,16 @@
 
 .form__textarea {
   display: block;
-  width: 280px;
+  width: 100%;
+  height: 200px;
   .margin();
 
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 22px;
   padding-left: 19px;
+
+  line-height: 30px;
 
   resize: none;
   border: solid 2px @light-grey;
@@ -197,12 +200,16 @@
   .form__fieldset {
     width: 620px;
     margin-bottom: 58px;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-bottom: 18px;
 
     border: 2px solid @light-grey;
 
     &--name {
       padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
       order: 1;
       border: none;
     }
@@ -262,43 +269,38 @@
     margin-left: 0;
 
     &--contacts {
-      position: relative;
       margin-top: 10px;
       margin-bottom: 12px;
-      margin-left: 77px;
-
-      &::before {
-        position: absolute;
-        content: "";
-
-        width: 59px;
-        height: 62.5px;
-
-        top: -72px;
-        right: 41px;
-
-        background-color: @light-grey;
-      }
+      margin-left: 17px;
     }
   }
 
   .form__input {
     &--contacts {
-      width: 438px;
-      margin-left: 60px;
-      margin-right: auto;
+      width: 100%;
 
       padding-top: 14px;
-      padding-right: 18px;
+      padding-right: 62px;
       padding-left: 18px;
+    }
 
-      z-index: 1;
+    &--contacts-phone {
+      background-image: url("../img/icon-phone.svg"), linear-gradient(90deg, #ffffff, #ffffff 87%, #e5e5e5 88%, #e5e5e5);
+      background-repeat: no-repeat;
+      background-position: right 20px center, left;
+    }
+
+    &--contacts-mail {
+      background-image: url("../img/icon-mail.svg"), linear-gradient(90deg, #ffffff, #ffffff 87%, #e5e5e5 88%, #e5e5e5);
+      background-repeat: no-repeat;
+      background-position: right 20px center, left;
     }
   }
 
   .form__textarea {
-    width: 500px;
+    height: 193px;
     padding-bottom: 14px;
+    line-height: 30px;
   }
 
   .form__button-wrapper {
@@ -337,7 +339,14 @@
       .form__fieldset {
         width: 435px;
         margin-right: 0;
+        margin-left: auto;
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 19px;
+      }
+
+      .form__list {
+        padding-left: 58px;
       }
     }
 
@@ -352,37 +361,38 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
-        margin-left: 47px;
       }
 
       .form__item {
-        width: 260px;
         margin-bottom: 0;
 
         &:first-child {
+          width: 260px;
           order: 1;
         }
 
         &:nth-child(2) {
+          width: 260px;
           order: 4;
         }
 
         &:nth-child(3) {
-          margin-left: 18px;
+          width: 245px;
           order: 2;
         }
 
         &:nth-child(4) {
-          margin-left: 18px;
+          width: 245px;
           order: 5;
         }
 
         &:nth-child(5) {
+          width: 210px;
           order: 3;
         }
 
         &:nth-child(6) {
+          width: 210px;
           order: 6;
         }
       }
@@ -391,8 +401,6 @@
 
   .form__fieldset {
     width: auto;
-    padding-right: 10px;
-    padding-left: 10px;
 
     &--name {
       width: 470px;
@@ -405,12 +413,13 @@
       width: 940px;
       margin-bottom: 57px;
 
-      & .form__list {
+      .form__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
 
-      & .form__item {
+      .form__item {
         margin-bottom: 0;
       }
     }
@@ -442,26 +451,29 @@
     padding-top: 15px;
 
     &--contacts {
-      width: 312px;
-      margin-right: 83px;
-      margin-left: 49px;
+      width: 374px;
+    }
+
+    &--contacts-phone {
+      background-image: url("../img/icon-phone.svg"), linear-gradient(90deg, #ffffff, #ffffff 83%, #e5e5e5 84%, #e5e5e5);
+      background-repeat: no-repeat;
+      background-position: right 20px center, left;
+    }
+
+    &--contacts-mail {
+      background-image: url("../img/icon-mail.svg"), linear-gradient(90deg, #ffffff, #ffffff 83%, #e5e5e5 84%, #e5e5e5);
+      background-repeat: no-repeat;
+      background-position: right 20px center, left;
     }
   }
 
   .form__label {
     &--contacts {
-      margin-left: 67px;
-
-      &::before {
-        width: 61px;
-        top: -73px;
-        right: 3px;
-      }
+      margin-left: 18px;
     }
   }
 
   .form__textarea {
-    width: 820px;
     height: 128px;
   }
 

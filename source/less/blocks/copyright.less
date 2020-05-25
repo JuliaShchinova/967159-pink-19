@@ -20,11 +20,21 @@
 
   margin-top: 10px;
   margin-left: 12px;
-
-  //временно
-
-  border: 1px solid @black;
 }
+
+.copyright__link-icon {
+  fill: @pink;
+
+  &:hover,
+  &:focus {
+    fill: @bg-darkblue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .copyright {

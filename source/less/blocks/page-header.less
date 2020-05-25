@@ -24,8 +24,6 @@
 
   display: flex;
   flex-direction: column;
-
-  background-color: @bg-darkblue;
 }
 
 .page-header__logo {
@@ -36,9 +34,40 @@
 
   top: 21px;
   left: 20px;
-  // left: calc(50% - 100px);
 
   z-index: 1;
+}
+
+.page-header__logo-image {
+  display: block;
+  position: absolute;
+
+  top: -16px;
+  left: -72px;
+
+  &:hover path,
+  &:focus path {
+    fill: @pink;
+    outline: none;
+  }
+
+  &:active path {
+    fill: @white;
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+.page-header__logo-stars {
+  display: none;
+}
+
+.page-header__logo-glasses {
+  display: none;
+}
+
+.page-header__logo-glasses-tablet {
+  display: none;
 }
 
 .page-header__title-wrapper {
@@ -75,7 +104,20 @@
   .page-header__logo {
     top: 43px;
     left: 91px;
-    // left: calc(50% - 200px);
+  }
+
+  .page-header__logo-glasses-tablet {
+    display: inline-block;
+
+    &:hover path,
+    &:focus path {
+      fill: @pink;
+    }
+
+    &:active path {
+      fill: @white;
+      opacity: 0.3;
+    }
   }
 
   .page-header__title-wrapper {
@@ -117,6 +159,22 @@
     }
   }
 
+  .page-header__logo-image {
+    position: static;
+  }
+
+  .page-header__logo-stars {
+    display: inline-block;
+  }
+
+  .page-header__logo-glasses {
+    display: inline-block;
+  }
+
+  .page-header__logo-glasses-tablet {
+    display: none;
+  }
+
   .page-header__wrapper-flex {
     min-height: 110px;
     flex-direction: row;
@@ -129,8 +187,7 @@
   .page-header__logo {
     position: static;
     width: 150px;
-    padding-top: 44px;
-    padding-left: 72px;
+    padding-top: 27px;
   }
 
   .page-header__title-wrapper {

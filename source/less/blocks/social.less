@@ -2,10 +2,10 @@
   width: 200px;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-around;
 }
 
 .social__link {
+  position: relative;
   width: 50px;
   height: 50px;
   margin-left: 10px;
@@ -13,6 +13,38 @@
 
   border: 3px solid rgba(@bg-darkblue, 10%);
   border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--twitter {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg fill='%23d22856' version='1.0' xmlns='http://www.w3.org/2000/svg' width='17.5' height='14.663'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.283.153c1.736-.485 3.074.263 3.685 1.151.694-.226 1.372-.47 2.072-.691-.004.841-.538 1.478-.883 1.727.704.166 1.343-.48 1.343-.48-.175.976-1.035 1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192 4.011-.412 4.835-1.15-.989-.293-2.761-.464-3.07-2.881.362.105.583.223 1.228.117C1.757 8.067.385 7.366.461 5.218c.294.32 1.1.523 1.381.461C1.117 5.444-.188 2.398.921.843 2.794 2.654 4.769 4.364 8.29 4.528 8.506 2.288 9.461.787 11.283.153z'/%3E%3C/svg%3E");
+    }
+  }
+
+  &--facebook {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg fill='%23d22856' version='1.0' xmlns='http://www.w3.org/2000/svg' width='8.673' height='18.944'%3E%3Cpath d='M6.275 3.357h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.115H0v3.517h1.958v9.312h3.837V9.632h2.857V6.115H5.786c-.021-1.045-.036-2.406.489-2.758z'/%3E%3C/svg%3E");
+    }
+  }
+
+  &--youtube {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg fill='%23d22856' version='1.0' xmlns='http://www.w3.org/2000/svg' width='14.64' height='13.96'%3E%3Cpath d='M1.775 13.78C.799 14.257 0 13.758 0 12.671V1.29C0 .202.799-.295 1.775.181l12.133 5.932c.975.478.975 1.258 0 1.736L1.775 13.78z'/%3E%3C/svg%3E");
+      background-position: left 16px top 50%;
+    }
+  }
 
   &:hover,
   &:focus {
@@ -23,5 +55,29 @@
   &:active {
     border-color: rgba(@bg-darkblue, 10%);
     outline: none;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 208px;
+  }
+
+  .social__link {
+    &--twitter {
+      background-position: left 16px top 16px;
+    }
+
+    &--facebook {
+      background-position: left 19px top 12px;
+    }
+
+    &--youtube {
+      background-position: left 16px top 15px;
+    }
   }
 }
