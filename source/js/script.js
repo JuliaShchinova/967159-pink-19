@@ -31,5 +31,7 @@ var makeObjectFit = function (img, type) {
 
 if (!objectFit) {
     var image = document.querySelector('.photos__link-image--panorama');
-    makeObjectFit(image, 'cover');
+    if (image) {
+      makeObjectFit(image, 'cover');
+    }
 }
