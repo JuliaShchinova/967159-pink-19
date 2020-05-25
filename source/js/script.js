@@ -1,7 +1,7 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 
-// navMain.classList.remove('main-nav--opened');
+navMain.classList.remove('main-nav--no-js');
 
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--closed')) {
@@ -33,5 +33,3 @@ if (!objectFit) {
     var image = document.querySelector('.photos__link-image--panorama');
     makeObjectFit(image, 'cover');
 }
-
-
